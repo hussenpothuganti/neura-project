@@ -1,0 +1,63 @@
+{
+  "name": "neura-x-guardian-angel-integrated",
+  "version": "1.0.0",
+  "description": "Complete Neura-X Guardian Angel application with integrated frontend and backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js",
+    "prod": "NODE_ENV=production node server.js",
+    "test": "node test-backend.js",
+    "build-frontend": "npm --prefix frontend run build && cp -r frontend/dist/* public/",
+    "install-frontend": "npm install --prefix frontend",
+    "setup": "npm install && npm run install-frontend && npm run build-frontend",
+    "clean": "rm -rf node_modules frontend/node_modules public/*",
+    "health": "curl http://localhost:3001/health"
+  },
+  "keywords": [
+    "ai",
+    "assistant",
+    "booking",
+    "voice",
+    "emergency",
+    "guardian",
+    "neura-x",
+    "jarvis",
+    "mongodb",
+    "socket.io",
+    "express",
+    "react"
+  ],
+  "author": "Neura-X Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "compression": "^1.7.4",
+    "express-rate-limit": "^6.8.1",
+    "dotenv": "^16.3.1",
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "openai": "^4.20.1",
+    "mongoose": "^8.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neura-x/guardian-angel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/neura-x/guardian-angel/issues"
+  },
+  "homepage": "https://github.com/neura-x/guardian-angel#readme"
+}
+
+
